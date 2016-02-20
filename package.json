@@ -1,5 +1,5 @@
 {
-  "name": "party",
+  "name": "party-youtube-downloader",
   "version": "1.0.0",
   "description": "Music downloader for party",
   "main": "index.js",
