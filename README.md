@@ -33,3 +33,19 @@ party
 - Bower
 - Grunt
 
+## How to develop? 
+
+```bash
+grunt init; grunt watch
+```
+
+and in another terminal
+
+```bash
+nodemon ./index.js
+```
+
+## Authors
+
+[Nemanja Nedeljković](https://nemanja.top/)
+
