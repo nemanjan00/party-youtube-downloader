@@ -11,6 +11,7 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap"])
 				type: 'video',
 				maxResults: '50',
 				part: 'id,snippet',
+				videoCategoryId: 10, 
 				fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle',
 				q: $scope.query
 			}

@@ -51471,6 +51471,7 @@ angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInli
 				type: 'video',
 				maxResults: '50',
 				part: 'id,snippet',
+				videoCategoryId: 10, 
 				fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle',
 				q: $scope.query
 			}
