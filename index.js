@@ -53,19 +53,9 @@ app.get('/stream/:id', function(request, response) {
 	var downloader = ytdl('https://www.youtube.com/watch?v='+request.params.id, {filter: 'audioonly'});
 
 	downloader.on("info", function(info, formats){
-		response.setHeader("Content-Disposition", "attachment; filename=\""+(++i)+"_"+encode(info.title)+".m4a\"");
+		console.log(formats);
 
-		downloader.on("error", function(data){
-			response.end();
-		});
-
-		downloader.on("data", function(data){
-			response.write(data);
-		});
-
-		downloader.on("end", function(data){
-			response.end();
-		});
+		response.redirect(formats.url);
 	});
 });
 
