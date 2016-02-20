@@ -3,9 +3,9 @@
   "version": "1.3.0",
   "description": "Music downloader for party",
   "main": "index.js",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/nemanjan00/party-youtube-downloader.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nemanjan00/party-youtube-downloader.git"
   },
   "scripts": {
     "start": "node ./index.js",
@@ -26,6 +26,7 @@
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "forever": "^0.15.1",
     "ytdl-core": "^0.7.10"
   }
 }
