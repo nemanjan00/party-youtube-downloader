@@ -1,0 +1,15 @@
+{
+  "name": "party",
+  "description": "Music downloader for party",
+  "authors": [
+    "nemanjan00 <nemanjan00@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.5.0",
+    "angular-bootstrap": "~1.1.2",
+    "angular-animate": "~1.5.0"
+  }
+}

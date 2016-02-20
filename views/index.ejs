@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="top.nemanja.party">
+	<head>
+		<title>Party</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./assets/stylesheets/stylesheet.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Party</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-122">
+					<ul class="list-group" ng-controller="Search">
+						<li class="list-group-item list-group-item-success">
+							<div class="input-group search">
+								<input ng-model="query" type="text" class="form-control" my-enter="search()" placeholder="Search for...">
+								<span class="input-group-btn">
+									<button class="btn btn-default" ng-click="search()" type="button">Go!</button>
+								</span>
+							</div>
+						</li>
+						<a ng-repeat="result in results.items" ng-click="download(result.id.videoId)" class="list-group-item clearfix">
+							<img class="pull-left img-thumbnail" ng-src="{{result.snippet.thumbnails.default.url}}">
+							<strong style="position: relative; left:10px;" ng-bind="result.snippet.title"></strong>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="./assets/javascript/javascript.js" charset="utf-8"></script>
+	</body>
+</html>

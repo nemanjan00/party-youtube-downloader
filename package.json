@@ -1,0 +1,24 @@
+{
+  "name": "party",
+  "version": "1.0.0",
+  "description": "Music downloader for party",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nemanjan00 <nemanjan00@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  },
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "ytdl-core": "^0.7.10"
+  }
+}
