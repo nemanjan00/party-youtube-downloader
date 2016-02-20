@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Music downloader for party",
   "main": "index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/npm/npm.git"
+  },
   "scripts": {
     "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
