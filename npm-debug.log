@@ -12,22 +12,22 @@
 7 silly cache add   rawSpec: './',
 7 silly cache add   spec: '/home/nemanjan00/party',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package.tgz not in flight; packing
+8 verbose addLocalDirectory /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz not in flight; packing
 9 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-10 info lifecycle party-youtube-downloader@1.0.0~prepublish: party-youtube-downloader@1.0.0
-11 silly lifecycle party-youtube-downloader@1.0.0~prepublish: no script for prepublish, continuing
-12 verbose tar pack [ '/home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package.tgz',
+10 info lifecycle party-youtube-downloader@1.0.1~prepublish: party-youtube-downloader@1.0.1
+11 silly lifecycle party-youtube-downloader@1.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz',
 12 verbose tar pack   '/home/nemanjan00/party' ]
-13 verbose tarball /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package.tgz
+13 verbose tarball /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
 14 verbose folder /home/nemanjan00/party
-15 verbose addLocalTarball adding from inside cache /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package.tgz
+15 verbose addLocalTarball adding from inside cache /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
 16 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-17 silly cache afterAdd party-youtube-downloader@1.0.0
-18 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package/package.json not in flight; writing
+17 silly cache afterAdd party-youtube-downloader@1.0.1
+18 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package/package.json not in flight; writing
 19 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-20 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package/package.json written
+20 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package/package.json written
 21 silly publish { name: 'party-youtube-downloader',
-21 silly publish   version: '1.0.0',
+21 silly publish   version: '1.0.1',
 21 silly publish   description: 'Music downloader for party',
 21 silly publish   main: 'index.js',
 21 silly publish   repository: { type: 'git', url: 'git+https://github.com/npm/npm.git' },
@@ -45,11 +45,11 @@
 21 silly publish   dependencies: { ejs: '^2.4.1', express: '^4.13.4', 'ytdl-core': '^0.7.10' },
 21 silly publish   readme: '# party-youtube-downloader\n\n![Screenshot](https://raw.githubusercontent.com/nemanjan00/party-youtube-downloader/master/screenshot/party.png)\n\n## Deploy to Heroku\n\n[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)\n\n## Written in\n\n### Backend\n\n- Node.JS\n\t- Express\n\t- ytdl-core\n\n### Frontend\n\n- Bootstrap\n- AngularJS\n\t- Angular-Bootstrap\n\t- Angular-Animate\n\n### Development Enviroment\n\n- Bower\n- Grunt\n\n',
 21 silly publish   readmeFilename: 'README.md',
-21 silly publish   gitHead: '835f499ddb3ed480f4f1d243b87d5244f0dc71a4',
+21 silly publish   gitHead: '4c58edac5ee9730095cdd4a10c4a51b7ad6e44ab',
 21 silly publish   bugs: { url: 'https://github.com/npm/npm/issues' },
 21 silly publish   homepage: 'https://github.com/npm/npm#readme',
-21 silly publish   _id: 'party-youtube-downloader@1.0.0',
-21 silly publish   _shasum: 'c24d87a27dd3e6ab42277201b6c1924848a6ed80',
+21 silly publish   _id: 'party-youtube-downloader@1.0.1',
+21 silly publish   _shasum: '1e58b4a0e55301c6bde192ee2f64127bf729231f',
 21 silly publish   _from: '.' }
 22 verbose getPublishConfig undefined
 23 silly mapToRegistry name party-youtube-downloader
@@ -57,28 +57,28 @@
 25 silly mapToRegistry registry https://registry.npmjs.org/
 26 silly mapToRegistry uri https://registry.npmjs.org/party-youtube-downloader
 27 verbose publish registryBase https://registry.npmjs.org/
-28 silly publish uploading /home/nemanjan00/.npm/party-youtube-downloader/1.0.0/package.tgz
+28 silly publish uploading /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
 29 verbose request uri https://registry.npmjs.org/party-youtube-downloader
 30 verbose request sending authorization for write operation
-31 info attempt registry request try #1 at 11:52:21 AM
+31 info attempt registry request try #1 at 11:56:44 AM
 32 verbose request using bearer token for auth
-33 verbose request id 6fbdc75fe6d4dda3
+33 verbose request id fc70b74e13cc3760
 34 http request PUT https://registry.npmjs.org/party-youtube-downloader
 35 http 403 https://registry.npmjs.org/party-youtube-downloader
 36 verbose headers { 'content-type': 'application/json',
 36 verbose headers   'cache-control': 'max-age=300',
 36 verbose headers   'content-length': '95',
 36 verbose headers   'accept-ranges': 'bytes',
-36 verbose headers   date: 'Sat, 20 Feb 2016 10:52:31 GMT',
+36 verbose headers   date: 'Sat, 20 Feb 2016 10:56:53 GMT',
 36 verbose headers   via: '1.1 varnish',
 36 verbose headers   connection: 'keep-alive',
-36 verbose headers   'x-served-by': 'cache-ams4146-AMS',
+36 verbose headers   'x-served-by': 'cache-lhr6332-LHR',
 36 verbose headers   'x-cache': 'MISS',
 36 verbose headers   'x-cache-hits': '0',
-36 verbose headers   'x-timer': 'S1455965542.218071,VS0,VE9090' }
+36 verbose headers   'x-timer': 'S1455965804.553325,VS0,VE8975' }
 37 verbose request invalidating /home/nemanjan00/.npm/registry.npmjs.org/party-youtube-downloader on PUT
 38 error publish Failed PUT 403
-39 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : party-youtube-downloader
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : party-youtube-downloader
 39 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
 39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
 39 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
@@ -97,7 +97,7 @@
 45 error node v5.6.0
 46 error npm  v3.7.1
 47 error code E403
-48 error "You cannot publish over the previously published version 1.0.0." : party-youtube-downloader
+48 error "You cannot publish over the previously published version 1.0.1." : party-youtube-downloader
 49 error If you need help, you may report this error at:
 49 error     <https://github.com/npm/npm/issues>
 50 verbose exit [ 1, true ]
