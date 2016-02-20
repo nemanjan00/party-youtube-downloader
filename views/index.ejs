@@ -23,6 +23,9 @@
 				<div class="col-md-6">
 					<ul class="list-group">
 						<li class="list-group-item">
+							<h3>Playlist: </h3>
+						</li>
+						<li class="list-group-item">
 							<input ng-model="filter" type="text" class="form-control" placeholder="Search for...">
 						</li>
 						<a ng-class="{active: currentPlaying.id == result.id}" ng-repeat="result in playlist | filter: filter" ng-click="download(result.id)" class="list-group-item clearfix" play-from-playlist="result">
@@ -33,6 +36,9 @@
 				</div>
 				<div class="col-md-6">
 					<ul class="list-group">
+						<li class="list-group-item">
+							<h3>Search: </h3>
+						</li>
 						<li class="list-group-item">
 							<div class="input-group search">
 								<input ng-model="query" type="text" class="form-control" my-enter="search()" placeholder="Search for...">
