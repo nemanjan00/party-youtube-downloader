@@ -8,7 +8,8 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="./assets/stylesheets/stylesheet.css">
 	</head>
-	<body>
+	<body ng-controller="Player">
+		<sound-manager></sound-manager>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -19,8 +20,19 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-122">
-					<ul class="list-group" ng-controller="Search">
+				<div class="col-md-6">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<input ng-model="filter" type="text" class="form-control" placeholder="Search for...">
+						</li>
+						<a ng-class="{active: currentPlaying.id == result.id}" ng-repeat="result in playlist | filter: filter" ng-click="download(result.id)" class="list-group-item clearfix" play-from-playlist="result">
+							<img class="pull-left img-thumbnail" ng-src="{(result.thumbnail)}">
+							<strong style="position: relative; left:10px;" ng-bind="result.title"></strong>
+						</a>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<ul class="list-group">
 						<li class="list-group-item">
 							<div class="input-group search">
 								<input ng-model="query" type="text" class="form-control" my-enter="search()" placeholder="Search for...">
@@ -29,15 +41,66 @@
 								</span>
 							</div>
 						</li>
-						<a ng-repeat="result in results.items" ng-click="download(result.id.videoId)" class="list-group-item clearfix">
-							<img class="pull-left img-thumbnail" ng-src="{{result.snippet.thumbnails.default.url}}">
-							<strong style="position: relative; left:10px;" ng-bind="result.snippet.title"></strong>
+						<a ng-repeat="result in results" class="list-group-item clearfix" music-player add-song="result">
+							<img class="pull-left img-thumbnail" ng-src="{(result.thumbnail)}">
+							<strong style="position: relative; left:10px;" ng-bind="result.title"></strong>
 						</a>
 					</ul>
 				</div>
 			</div>
 		</div>
 
-		<script src="./assets/javascript/javascript.min.js" charset="utf-8"></script>
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="collapse">
+					<div class="btn-group">
+						<button class="btn btn-default navbar-btn" prev-track>
+							<span class="icon icon-left-dir"></span>
+						</button>
+
+						<button class="btn btn-default navbar-btn" ng-show="!isPlaying" play-music>
+							<span class="icon icon-play"></span>
+						</button>
+
+						<button class="btn btn-default navbar-btn" ng-show="isPlaying" pause-music>
+							<span class="icon icon-pause"></span>
+						</button>
+
+						<button class="btn btn-default navbar-btn" next-track>
+							<span class="icon icon-right-dir"></span>
+						</button>
+
+						<button type="button" class="btn btn-default navbar-btn" uib-popover-template="volumetemplate">
+							<span class="icon icon-volume"></span>
+						</button>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a style="text-align: center">{(current.mins)}:{(current.secs)} / {(total.mins)}:{(total.secs)}</a></li>
+					</ul>
+
+					<div class="move-right">
+						<span slider class="sliders" ng-model="song.position" max="song.duration" ng-change="move()"></span>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<script type="text/ng-template" id="volumetemplate.html">
+			<div>
+				<span orientation="vertical" slider ng-model="volume.value" reversed="true" max="100" ng-change="setVolume()"></span>
+			</div>
+		</script>
+
+		<script src="./assets/javascript/javascript.js" charset="utf-8"></script>
 	</body>
+
 </html>

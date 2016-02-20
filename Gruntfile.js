@@ -10,9 +10,14 @@ module.exports = function(grunt) {
 				src: [
 					'./bower_components/jquery/dist/jquery.js',
 					'./assets/javascript/fix.js',
+					'./bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js',
+					'./bower_components/bootstrap/dist/js/bootstrap.js',
 					'./bower_components/angular/angular.js',
 					'./bower_components/angular-animate/angular-animate.js',
 					'./bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+					'./bower_components/angular-soundmanager2/dist/angular-soundmanager2.js',
+
+					'./bower_components/angular-bootstrap-slider/slider.js',
 					'./assets/javascript/custom.js'
 				],
 				dest: './public/assets/javascript/javascript.js'
