@@ -53,6 +53,10 @@ app.get('/stream/:id', function(request, response) {
 	downloader.on("info", function(info, formats){
 		response.setHeader("Content-Disposition", "attachment; filename=\""+(++i)+"_"+encode(info.title)+".m4a\"");
 
+		downloader.on("error", function(data){
+			response.end();
+		});
+
 		downloader.on("data", function(data){
 			response.write(data);
 		});
