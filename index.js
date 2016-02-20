@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Packages
 
 var path = require("path");

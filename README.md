@@ -2,6 +2,13 @@
 
 ![Screenshot](https://raw.githubusercontent.com/nemanjan00/party-youtube-downloader/master/screenshot/party.png)
 
+## Run it localy
+
+```bash
+sudo npm install party-youtube-downloader -g
+party
+```
+
 ## Deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)

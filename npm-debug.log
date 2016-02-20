@@ -1,103 +1,45 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', './' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
 2 info using npm@3.7.1
 3 info using node@v5.6.0
-4 verbose publish [ './' ]
-5 silly cache add args [ './', null ]
-6 verbose cache add spec ./
-7 silly cache add parsed spec Result {
-7 silly cache add   raw: './',
-7 silly cache add   scope: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: './',
-7 silly cache add   spec: '/home/nemanjan00/party',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz not in flight; packing
-9 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-10 info lifecycle party-youtube-downloader@1.0.1~prepublish: party-youtube-downloader@1.0.1
-11 silly lifecycle party-youtube-downloader@1.0.1~prepublish: no script for prepublish, continuing
-12 verbose tar pack [ '/home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz',
-12 verbose tar pack   '/home/nemanjan00/party' ]
-13 verbose tarball /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
-14 verbose folder /home/nemanjan00/party
-15 verbose addLocalTarball adding from inside cache /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
-16 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-17 silly cache afterAdd party-youtube-downloader@1.0.1
-18 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package/package.json not in flight; writing
-19 verbose correctMkdir /home/nemanjan00/.npm correctMkdir not in flight; initializing
-20 verbose afterAdd /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package/package.json written
-21 silly publish { name: 'party-youtube-downloader',
-21 silly publish   version: '1.0.1',
-21 silly publish   description: 'Music downloader for party',
-21 silly publish   main: 'index.js',
-21 silly publish   repository: { type: 'git', url: 'git+https://github.com/npm/npm.git' },
-21 silly publish   scripts:
-21 silly publish    { start: 'node ./index.js',
-21 silly publish      test: 'echo "Error: no test specified" && exit 1' },
-21 silly publish   author: { name: 'nemanjan00', email: 'nemanjan00@gmail.com' },
-21 silly publish   license: 'MIT',
-21 silly publish   devDependencies:
-21 silly publish    { grunt: '*',
-21 silly publish      'grunt-contrib-concat': '*',
-21 silly publish      'grunt-contrib-less': '*',
-21 silly publish      'grunt-contrib-uglify': '*',
-21 silly publish      'grunt-contrib-watch': '*' },
-21 silly publish   dependencies: { ejs: '^2.4.1', express: '^4.13.4', 'ytdl-core': '^0.7.10' },
-21 silly publish   readme: '# party-youtube-downloader\n\n![Screenshot](https://raw.githubusercontent.com/nemanjan00/party-youtube-downloader/master/screenshot/party.png)\n\n## Deploy to Heroku\n\n[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)\n\n## Written in\n\n### Backend\n\n- Node.JS\n\t- Express\n\t- ytdl-core\n\n### Frontend\n\n- Bootstrap\n- AngularJS\n\t- Angular-Bootstrap\n\t- Angular-Animate\n\n### Development Enviroment\n\n- Bower\n- Grunt\n\n',
-21 silly publish   readmeFilename: 'README.md',
-21 silly publish   gitHead: '4c58edac5ee9730095cdd4a10c4a51b7ad6e44ab',
-21 silly publish   bugs: { url: 'https://github.com/npm/npm/issues' },
-21 silly publish   homepage: 'https://github.com/npm/npm#readme',
-21 silly publish   _id: 'party-youtube-downloader@1.0.1',
-21 silly publish   _shasum: '1e58b4a0e55301c6bde192ee2f64127bf729231f',
-21 silly publish   _from: '.' }
-22 verbose getPublishConfig undefined
-23 silly mapToRegistry name party-youtube-downloader
-24 silly mapToRegistry using default registry
-25 silly mapToRegistry registry https://registry.npmjs.org/
-26 silly mapToRegistry uri https://registry.npmjs.org/party-youtube-downloader
-27 verbose publish registryBase https://registry.npmjs.org/
-28 silly publish uploading /home/nemanjan00/.npm/party-youtube-downloader/1.0.1/package.tgz
-29 verbose request uri https://registry.npmjs.org/party-youtube-downloader
-30 verbose request sending authorization for write operation
-31 info attempt registry request try #1 at 11:56:44 AM
-32 verbose request using bearer token for auth
-33 verbose request id fc70b74e13cc3760
-34 http request PUT https://registry.npmjs.org/party-youtube-downloader
-35 http 403 https://registry.npmjs.org/party-youtube-downloader
-36 verbose headers { 'content-type': 'application/json',
-36 verbose headers   'cache-control': 'max-age=300',
-36 verbose headers   'content-length': '95',
-36 verbose headers   'accept-ranges': 'bytes',
-36 verbose headers   date: 'Sat, 20 Feb 2016 10:56:53 GMT',
-36 verbose headers   via: '1.1 varnish',
-36 verbose headers   connection: 'keep-alive',
-36 verbose headers   'x-served-by': 'cache-lhr6332-LHR',
-36 verbose headers   'x-cache': 'MISS',
-36 verbose headers   'x-cache-hits': '0',
-36 verbose headers   'x-timer': 'S1455965804.553325,VS0,VE8975' }
-37 verbose request invalidating /home/nemanjan00/.npm/registry.npmjs.org/party-youtube-downloader on PUT
-38 error publish Failed PUT 403
-39 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : party-youtube-downloader
-39 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-39 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-39 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:199:22)
-39 verbose stack     at emitTwo (events.js:100:13)
-39 verbose stack     at Request.emit (events.js:185:7)
-39 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1036:10)
-39 verbose stack     at emitOne (events.js:95:20)
-39 verbose stack     at Request.emit (events.js:182:7)
-39 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:963:12)
-40 verbose statusCode 403
-41 verbose pkgid party-youtube-downloader
-42 verbose cwd /home/nemanjan00/party
-43 error Linux 4.4.1-2-ARCH
-44 error argv "/usr/bin/node" "/usr/bin/npm" "publish" "./"
-45 error node v5.6.0
-46 error npm  v3.7.1
-47 error code E403
-48 error "You cannot publish over the previously published version 1.0.1." : party-youtube-downloader
-49 error If you need help, you may report this error at:
-49 error     <https://github.com/npm/npm/issues>
-50 verbose exit [ 1, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle party-youtube-downloader@1.1.0~prestart: party-youtube-downloader@1.1.0
+6 silly lifecycle party-youtube-downloader@1.1.0~prestart: no script for prestart, continuing
+7 info lifecycle party-youtube-downloader@1.1.0~start: party-youtube-downloader@1.1.0
+8 verbose lifecycle party-youtube-downloader@1.1.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle party-youtube-downloader@1.1.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/nemanjan00/party/node_modules/.bin:/usr/bin:/home/nemanjan00/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/nemanjan00/.composer/vendor/bin:/home/nemanjan00/.gem/ruby/2.2.0/bin:/home/nemanjan00/.rvm/bin
+10 verbose lifecycle party-youtube-downloader@1.1.0~start: CWD: /home/nemanjan00/party
+11 silly lifecycle party-youtube-downloader@1.1.0~start: Args: [ '-c', 'node ./index.js' ]
+12 silly lifecycle party-youtube-downloader@1.1.0~start: Returned: code: 1  signal: null
+13 info lifecycle party-youtube-downloader@1.1.0~start: Failed to exec start script
+14 verbose stack Error: party-youtube-downloader@1.1.0 start: `node ./index.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid party-youtube-downloader@1.1.0
+16 verbose cwd /home/nemanjan00/party
+17 error Linux 4.4.1-2-ARCH
+18 error argv "/usr/bin/node" "/usr/bin/npm" "start"
+19 error node v5.6.0
+20 error npm  v3.7.1
+21 error code ELIFECYCLE
+22 error party-youtube-downloader@1.1.0 start: `node ./index.js`
+22 error Exit status 1
+23 error Failed at the party-youtube-downloader@1.1.0 start script 'node ./index.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the party-youtube-downloader package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./index.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs party-youtube-downloader
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls party-youtube-downloader
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
