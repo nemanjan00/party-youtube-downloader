@@ -9,7 +9,7 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap"])
 			params: {
 				key: 'AIzaSyA9QbsxQOQ4JzLWGolLaGrRLcmyrqnzCZo',
 				type: 'video',
-				maxResults: '8',
+				maxResults: '50',
 				part: 'id,snippet',
 				fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle',
 				q: $scope.query
