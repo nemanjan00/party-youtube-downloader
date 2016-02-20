@@ -27,6 +27,23 @@ app.get('/', function(request, response) {
 
 var i = 0;
 
+var encode =  function(data){
+	data = data
+		.replace("š", "s")
+		.replace("đ", "dj")
+		.replace("č", "c")
+		.replace("ć", "c")
+		.replace("ž", "z")
+		.replace("Š", "S")
+		.replace("Đ", "Dj")
+		.replace("Č", "C")
+		.replace("Ć", "Ć")
+		.replace("Ž", "Ž")
+		.replace(/[^\x00-\x7F]/g, "");
+
+	return data;
+}
+
 app.get('/stream/:id', function(request, response) {
 	response.setHeader("Content-Description", "File Transfer");
 	response.setHeader("Content-Type", "audio/m4a");
@@ -34,7 +51,7 @@ app.get('/stream/:id', function(request, response) {
 	var downloader = ytdl('https://www.youtube.com/watch?v='+request.params.id, {filter: 'audioonly'});
 
 	downloader.on("info", function(info, formats){
-		response.setHeader("Content-Disposition", "attachment; filename=\""+(++i)+"_"+info.title+".m4a\"");
+		response.setHeader("Content-Disposition", "attachment; filename=\""+(++i)+"_"+encode(info.title)+".m4a\"");
 
 		downloader.on("data", function(data){
 			response.write(data);
