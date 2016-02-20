@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 				files: [
 						'./assets/javascript/custom.js'
 					],
-				tasks: ['concat:js_frontend'],
+				tasks: ['concat:js_frontend', 'uglify'],
 				options: {
 					livereload: true
 				}
