@@ -30,6 +30,8 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap"])
 			window.open("/stream/"+id);
 		}
     }
+
+	$scope.search();
 })
 .directive('myEnter', function () {
 	return function (scope, element, attrs) {

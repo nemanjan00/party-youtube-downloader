@@ -51490,6 +51490,8 @@ angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInli
 			window.open("/stream/"+id);
 		}
     }
+
+	$scope.search();
 })
 .directive('myEnter', function () {
 	return function (scope, element, attrs) {
