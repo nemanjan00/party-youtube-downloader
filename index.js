@@ -50,13 +50,20 @@ app.get('/stream/:id', function(request, response) {
 	response.setHeader("Content-Description", "File Transfer");
 	response.setHeader("Content-Type", "audio/m4a");
 
-	var downloader = ytdl('https://www.youtube.com/watch?v='+request.params.id, {filter: 'audioonly'});
+	var downloader = ytdl.getInfo('https://www.youtube.com/watch?v='+request.params.id, {filter: 'audioonly'}, function(err, info){
+		for(i = 0; i < info.formats.length; i++){
+			if(info.formats[i].resolution === null){
+				response.redirect(info.formats[i].url);
+				break;
+			}
+		}
+	});
 
-	downloader.on("info", function(info, formats){
+	/*downloader.on("info", function(info, formats){
 		console.log(formats);
 
 		response.redirect(formats.url);
-	});
+	});*/
 });
 
 app.listen(app.get('port'), function () {
