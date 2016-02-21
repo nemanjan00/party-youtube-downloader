@@ -28,11 +28,11 @@
 						<li class="list-group-item">
 							<input ng-model="filter" type="text" class="form-control" placeholder="Search for...">
 						</li>
-						<a ng-class="{active: currentPlaying.id == result.id}" ng-repeat="result in playlist | filter: filter" ng-click="download(result.id)" class="list-group-item clearfix" play-from-playlist="result">
+						<a ng-class="{active: currentPlaying.id == result.id}" ng-repeat="(id, result) in playlist | filter: filter" ng-click="download(result.id)" class="list-group-item clearfix" play-from-playlist="result">
 							<img class="pull-left img-thumbnail" ng-src="{(result.thumbnail)}">
 							<strong style="position: relative; left:10px;" ng-bind="result.title"></strong>
-							<span class="pull-right">
-								<button ng-click="$event.stopPropagation();" class="btn btn-default btn-danger" remove-from-playlist="result">
+							<span class="pull-right" ng-show="currentPlaying.id != result.id">
+								<button ng-click="deleteSong(song, id); $event.stopPropagation();" class="btn btn-default btn-danger">
 									<span class="glyphicon glyphicon-trash"></span>
 								</button>
 							</span>

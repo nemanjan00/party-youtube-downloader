@@ -34,6 +34,10 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-
 		});		
     }
 
+	$scope.deleteSong = function(song, id){
+		angularPlayer.removeSong(song.id, id);
+	}
+
 	$scope.status = "play";
 
 	$scope.search();
@@ -52,6 +56,10 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-
 	};
 
 	$scope.song = {};
+
+	$scope.log = function(data){
+		console.log(data);
+	}
 
 	$scope.song.duration = 0;
 	$scope.song.position = 0;
