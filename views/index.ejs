@@ -31,9 +31,12 @@
 						<a ng-class="{active: currentPlaying.id == result.id}" ng-repeat="(id, result) in playlist | filter: filter" ng-click="download(result.id)" class="list-group-item clearfix" play-from-playlist="result">
 							<img class="pull-left img-thumbnail" ng-src="{(result.thumbnail)}">
 							<strong style="position: relative; left:10px;" ng-bind="result.title"></strong>
-							<span class="pull-right" ng-show="currentPlaying.id != result.id">
-								<button ng-click="deleteSong(song, id); $event.stopPropagation();" class="btn btn-default btn-danger">
+							<span class="pull-right">
+								<button ng-click="deleteSong(result, id); $event.stopPropagation();" ng-show="currentPlaying.id != result.id" class="btn btn-default btn-danger">
 									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+								<button ng-click="downloadSong(result.id); $event.stopPropagation();" class="btn btn-default btn-success">
+									<span class="glyphicon glyphicon-download-alt"></span>
 								</button>
 							</span>
 						</a>
@@ -55,6 +58,11 @@
 						<a ng-repeat="result in results" class="list-group-item clearfix" music-player add-song="result">
 							<img class="pull-left img-thumbnail" ng-src="{(result.thumbnail)}">
 							<strong style="position: relative; left:10px;" ng-bind="result.title"></strong>
+							<span class="pull-right">
+								<button ng-click="downloadSong(result.id); $event.stopPropagation();" class="btn btn-default btn-success">
+									<span class="glyphicon glyphicon-download-alt"></span>
+								</button>
+							</span>
 						</a>
 					</ul>
 				</div>

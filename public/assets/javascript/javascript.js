@@ -60818,11 +60818,13 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-
 		});		
     }
 
+	$scope.downloadSong = function(id){
+		window.open("download/"+id);
+	}
+
 	$scope.deleteSong = function(song, id){
 		angularPlayer.removeSong(song.id, id);
 	}
-
-	$scope.status = "play";
 
 	$scope.search();
 	
