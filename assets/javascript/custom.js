@@ -14,6 +14,23 @@ function isJson(str) {
 	}
 	return data;
 }
+function encode(data){
+	data = data
+		.replace("š", "s")
+		.replace("đ", "dj")
+		.replace("č", "c")
+		.replace("ć", "c")
+		.replace("ž", "z")
+		.replace("Š", "S")
+		.replace("Đ", "Dj")
+		.replace("Č", "C")
+		.replace("Ć", "Ć")
+		.replace("Ž", "Ž")
+		.replace(/[^\x00-\x7F]/g, "");
+
+	return data;
+}
+
 
 angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.bootstrap-slider", "angularSoundManager"])
 
@@ -36,7 +53,7 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 			angular.forEach(data.items, function(value, key){
 				var song = {
 					thumbnail: value.snippet.thumbnails.default.url,
-					title: value.snippet.title,
+					title: encode(value.snippet.title),
 					url: "/stream/"+value.id.videoId, 
 					id: value.id.videoId,
 					artist: value.title
