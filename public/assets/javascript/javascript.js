@@ -61003,7 +61003,7 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 			angular.forEach(data.items, function(value, key){
 				var song = {
 					thumbnail: value.snippet.thumbnails.default.url,
-					title: value.snippet.title,
+					title: encode(value.snippet.title),
 					url: "/stream/"+value.id.videoId, 
 					id: value.id.videoId,
 					artist: value.title
