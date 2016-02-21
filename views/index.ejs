@@ -22,8 +22,13 @@
 			<div class="row">
 				<div class="col-md-6">
 					<ul class="list-group">
-						<li class="list-group-item">
+						<li class="list-group-item clearfix">
 							<h3>Playlist: </h3>
+							<span class="pull-right">
+								<button ng-click="share(); $event.stopPropagation();" class="btn btn-default btn-success">
+									<span class="glyphicon glyphicon-download-alt"></span>
+								</button>
+							</span>
 						</li>
 						<li class="list-group-item">
 							<input ng-model="filter" type="text" class="form-control" placeholder="Search for...">
@@ -119,7 +124,24 @@
 			</div>
 		</script>
 
-		<script src="./assets/javascript/javascript.min.js" charset="utf-8"></script>
+		<script type="text/ng-template" id="share.html">
+			<div class="modal-header">
+				<h3 class="modal-title">Share playlist</h3>
+			</div>
+			<div class="modal-body">
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></button>
+					</div>
+					<input type="text" class="form-control" ng-model="url">
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+			</div>
+		</script>
+
+		<script src="./assets/javascript/javascript.js" charset="utf-8"></script>
 	</body>
 
 </html>

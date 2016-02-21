@@ -16,8 +16,8 @@ module.exports = function(grunt) {
 					'./bower_components/angular-animate/angular-animate.js',
 					'./bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
 					'./bower_components/angular-soundmanager2/dist/angular-soundmanager2.js',
-
 					'./bower_components/angular-bootstrap-slider/slider.js',
+					'./bower_components/angular-base64/angular-base64.js',
 					'./assets/javascript/custom.js'
 				],
 				dest: './public/assets/javascript/javascript.js'

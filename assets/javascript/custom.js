@@ -4,12 +4,25 @@ function pad(num, size) {
 	return s;
 }
 
-angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-slider", "angularSoundManager"])
-.config(['$interpolateProvider', function($interpolateProvider) {
-	return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+function isJson(str) {
+	var data;
+
+	try {
+		data = JSON.parse(str);
+    } catch (e) {
+		return false;
 	}
-])
-.controller("Player", function($http, $scope, $log, YoutubeSearch, angularPlayer, $rootScope){
+	return data;
+}
+
+angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.bootstrap-slider", "angularSoundManager"])
+
+.config(['$interpolateProvider', '$locationProvider', function($interpolateProvider, $locationProvider) {
+	$locationProvider.html5Mode(false);
+	$interpolateProvider.startSymbol('{(').endSymbol(')}');
+}])
+
+.controller("Player", function($uibModal, $base64, $location, $http, $scope, $log, YoutubeSearch, angularPlayer, $rootScope){
 	$('.volume').popover({html: true});
 
 	$scope.results = [];
@@ -33,6 +46,58 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-
 			});
 		});		
     }
+
+	if($location.hash() !== ""){
+		var playlist;
+		if(playlist = isJson($base64.decode($location.hash()))){
+			angular.forEach(playlist, function(song, key){
+				song.url = "/stream/"+song.id;
+
+				angularPlayer.addToPlaylist(song);
+			});
+		}
+	}
+
+	$scope.animationsEnabled = true;
+
+	$scope.openShare = function (size) {
+
+		var modalInstance = $uibModal.open({
+			animation: $scope.animationsEnabled,
+			templateUrl: 'share.html',
+			controller: 'shareCtrl',
+			resolve: {
+				url: function () {
+					return $scope.shortUrl;
+				}
+			}
+		});
+	}
+
+	$scope.share = function(){
+		var playlist = angularPlayer.getPlaylist();
+
+		var dataDump = [];
+
+		angular.forEach(playlist, function(song, key){
+			dataDump.push({
+				id: song.id,
+				title: song.title,
+				thumbnail: song.thumbnail
+			});
+		});
+
+		var site = $location.protocol()+"://"+$location.host()+":"+$location.port()+"/##";
+
+		$http.post('https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyA9QbsxQOQ4JzLWGolLaGrRLcmyrqnzCZo', {longUrl:site+$base64.encode(JSON.stringify(dataDump))}).success(function(data,status,headers,config){
+            $scope.shortUrl = data.id;
+
+			$scope.openShare();
+        }).
+        error(function(data,status,headers,config){
+
+        });
+	}
 
 	$scope.downloadSong = function(id){
 		window.open("download/"+id);
@@ -131,6 +196,13 @@ angular.module("top.nemanja.party", ["ngAnimate", "ui.bootstrap", "ui.bootstrap-
 			console.log(err);
 			$log.info('Search error');
 		});
+	};
+}).controller('shareCtrl', function ($scope, $uibModalInstance, url) {
+
+	$scope.url = url;
+
+	$scope.cancel = function () {
+		$uibModalInstance.dismiss();
 	};
 });
 
