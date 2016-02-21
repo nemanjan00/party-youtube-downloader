@@ -21,7 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Express routing
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(request, response) {
 	response.render("index");
