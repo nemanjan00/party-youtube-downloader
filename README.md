@@ -27,6 +27,7 @@ party
 - AngularJS
 	- Angular-Bootstrap
 	- Angular-Animate
+	- SoundManager 2
 
 ### Development Enviroment
 
