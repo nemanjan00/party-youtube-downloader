@@ -11,13 +11,13 @@ deploy:
     secure: X0VxBBXpeb1v1qDQG4mvAaROh3Ah9IUAK5UqJMQAhs7EmC1KNpwxjN1S540GlC4LINTX6uWSpAZ1/jzwo4qHVt7f3jfrPsCBS/FtwVneSzJeWn0P/wo+XKbqLvsRslYXcbiheVrjlPi0kgE6sdUNipEnTk3HJ1XhFS16mN416oZZ9gWP4iuJukrnopHnIrWt+9BuSAwwn6vdfI+mzM290weNYnwFQY3r++UqCC0b+bOrMCFfhGhys9va7jiW7ZGj96yeHRtQvRsxLGyHodSMH+Lr7c7u1O4ciD8NyFn1+NxeR2tIDZSVxRjzA+UUOZj0XggChLhCX7sN6zjAy+B/F9SPxU/Nnkrb51C2Z52cksHBRkqg/iv5SNH4IpHBPt3fYpGBsHrivQPurbOWPli8j1MA97aTlOnjUZNirZ9pV4/Mqhr45eE4cHdtKZMwGUcebUIhUek5pdgH99HOJwkN2AV19qIezgsIPI3RlYi5rq+ZQMgmzT3BeX4ZXjlGCWyRuj+uGNqpZXaEnCkFbR9gQXWIPyI4VhaHrEO1uWojXIU6jhQ+HMV/Z4zPYPGW5fGueuo9XE+Fto1u2zK1747pnGcRFlsinOurYJWCpPlowVVZjRQ1NKA3k2n0WJEmr5Zxst3KX+3xA1ytzVZO4Qr/ZgWLS093+eXhel5uS023caI=
   file: 
     - "./build/app.asar"
-    - "./build/musictime-darwin.zip"
-    - "./build/musictime-linux-ia32.zip"
-    - "./build/musictime-linux-x64.zip"
-    - "./build/musictime-windows-ia32.zip"
-    - "./build/musictime-windows-x64.zip"
+    - "./build/party-youtube-downloader-darwin.zip"
+    - "./build/party-youtube-downloader-linux-ia32.zip"
+    - "./build/party-youtube-downloader-linux-x64.zip"
+    - "./build/party-youtube-downloader-windows-ia32.zip"
+    - "./build/party-youtube-downloader-windows-x64.zip"
   on:
-    repo: nemanjan00/musictime
+    repo: nemanjan00/party-youtube-downloader
     all_branches: true
     tags: true
 
