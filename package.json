@@ -1,6 +1,6 @@
 {
   "name": "party-youtube-downloader",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Music downloader for party",
   "main": "./electron.js",
   "repository": {
