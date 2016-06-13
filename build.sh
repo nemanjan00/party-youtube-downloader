@@ -8,7 +8,7 @@ asar p ../public/ ./app.asar
 
 mkdir -p ./build
 
-mv ../app.asar ./build
+mv ./app.asar ./build
 
 cd ./build
 
