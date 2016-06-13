@@ -2,6 +2,10 @@
 
 ![Screenshot](https://raw.githubusercontent.com/nemanjan00/party-youtube-downloader/master/screenshot/party.png)
 
+## Run GUI [Electron]
+
+Download it [here](https://github.com/nemanjan00/party-youtube-downloader/releases)
+
 ## Run it localy
 
 ```bash
