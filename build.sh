@@ -4,7 +4,7 @@ npm install
 
 cd ..
 
-asar p ../public/ ./app.asar
+asar p ../ ./app.asar
 
 mkdir -p ./build
 
