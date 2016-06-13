@@ -39,45 +39,45 @@ cp ./app.asar ./lw/resources/app.asar
 
 # Windows
 
-if [ ! -f ./musictime-windows-ia32.zip ]; then
-	cp ./electron-v1.2.2-win32-ia32.zip ./musictime-windows-ia32.zip
+if [ ! -f ./party-youtube-downloader-windows-ia32.zip ]; then
+	cp ./electron-v1.2.2-win32-ia32.zip ./party-youtube-downloader-windows-ia32.zip
 fi
 
 cd ./lw
 
-zip -r ../musictime-windows-ia32.zip ./
+zip -r ../party-youtube-downloader-windows-ia32.zip ./
 
 cd ..
 
-if [ ! -f ./musictime-windows-x64.zip ]; then
-	cp ./electron-v1.2.2-win32-x64.zip ./musictime-windows-x64.zip
+if [ ! -f ./party-youtube-downloader-windows-x64.zip ]; then
+	cp ./electron-v1.2.2-win32-x64.zip ./party-youtube-downloader-windows-x64.zip
 fi
 
 cd ./lw
 
-zip -r ../musictime-windows-x64.zip ./
+zip -r ../party-youtube-downloader-windows-x64.zip ./
 
 cd ..
 
 # Linux
 
-if [ ! -f ./musictime-linux-ia32.zip ]; then
-	cp ./electron-v1.2.2-linux-ia32.zip ./musictime-linux-ia32.zip
+if [ ! -f ./party-youtube-downloader-linux-ia32.zip ]; then
+	cp ./electron-v1.2.2-linux-ia32.zip ./party-youtube-downloader-linux-ia32.zip
 fi
 
 cd ./lw
 
-zip -r ../musictime-linux-ia32.zip ./
+zip -r ../party-youtube-downloader-linux-ia32.zip ./
 
 cd ..
 
-if [ ! -f ./musictime-linux-x64.zip ]; then
-	cp ./electron-v1.2.2-linux-x64.zip ./musictime-linux-x64.zip
+if [ ! -f ./party-youtube-downloader-linux-x64.zip ]; then
+	cp ./electron-v1.2.2-linux-x64.zip ./party-youtube-downloader-linux-x64.zip
 fi
 
 cd ./lw
 
-zip -r ../musictime-linux-x64.zip ./
+zip -r ../party-youtube-downloader-linux-x64.zip ./
 
 cd ..
 
@@ -85,8 +85,8 @@ rm -rf ./lw
 
 # OSX
 
-if [ ! -f ./musictime-darwin.zip ]; then
-	cp ./electron-v1.2.2-darwin-x64.zip ./musictime-darwin.zip
+if [ ! -f ./party-youtube-downloader-darwin.zip ]; then
+	cp ./electron-v1.2.2-darwin-x64.zip ./party-youtube-downloader-darwin.zip
 fi
 
 mkdir -p ./darwin/Electron.app/Contents/Resources/
@@ -95,7 +95,7 @@ cp ./app.asar ./darwin/Electron.app/Contents/Resources/
 
 cd ./darwin/
 
-zip -r ../musictime-darwin.zip ./
+zip -r ../party-youtube-downloader-darwin.zip ./
 
 cd ..
 
