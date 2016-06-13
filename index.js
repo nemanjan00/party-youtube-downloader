@@ -93,3 +93,5 @@ app.listen(app.get('port'), function () {
 	console.log('Started web server on port: ' + app.get('port'));
 });
 
+module.exports = {};
+
