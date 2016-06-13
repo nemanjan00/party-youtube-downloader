@@ -1,10 +1,4 @@
-cd ./public
-
-npm install
-
-cd ..
-
-asar p ../ ./app.asar
+asar p ./ ./app.asar
 
 mkdir -p ./build
 
