@@ -60959,7 +60959,7 @@ function isJson(str) {
 
 	try {
 		data = JSON.parse(str);
-    } catch (e) {
+	} catch (e) {
 		return false;
 	}
 	return data;
@@ -60996,7 +60996,7 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 
 	$scope.query = "";
 
-    $scope.search = function () {
+	$scope.search = function () {
 		YoutubeSearch($scope.query, function(data){
 			$scope.results = [];
 
@@ -61012,7 +61012,7 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 				$scope.results.push(song);
 			});
 		});		
-    }
+	}
 
 	if($location.hash() !== ""){
 		var playlist;
@@ -61057,13 +61057,13 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 		var site = $location.protocol()+"://"+$location.host()+":"+$location.port()+"/##";
 
 		$http.post('https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyA9QbsxQOQ4JzLWGolLaGrRLcmyrqnzCZo', {longUrl:site+$base64.encode(JSON.stringify(dataDump))}).success(function(data,status,headers,config){
-            $scope.shortUrl = data.id;
+			$scope.shortUrl = data.id;
 
 			$scope.openShare();
-        }).
-        error(function(data,status,headers,config){
+		}).
+		error(function(data,status,headers,config){
 
-        });
+		});
 	}
 
 	$scope.downloadSong = function(id){
@@ -61117,14 +61117,14 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 		$scope.current.mins = pad(Math.floor(Math.floor(data/1000)/60), 2);
 		$scope.current.secs = pad(Math.floor(data/1000) - Math.floor(Math.floor(data/1000)/60)*60, 2);
 
-	    $scope.song.position = data;
+		$scope.song.position = data;
 	});
 
 	$scope.$on('currentTrack:duration', function(event, data) {
 		$scope.total.mins = pad(Math.floor(Math.floor(data/1000)/60), 2);
 		$scope.total.secs = pad(Math.floor(data/1000) - Math.floor(Math.floor(data/1000)/60)*60, 2);
 
-	    $scope.song.duration = data;
+		$scope.song.duration = data;
 	});
 
 })
@@ -61145,7 +61145,7 @@ angular.module("top.nemanja.party", ["base64", "ngAnimate", "ui.bootstrap", "ui.
 	return function(query, callback) {
 		$http.get('https://www.googleapis.com/youtube/v3/search', {
 			params: {
-				key: 'AIzaSyA9QbsxQOQ4JzLWGolLaGrRLcmyrqnzCZo',
+				key: 'AIzaSyBzSbd6O2Cb0fB2zxQXLFAdDq274ouEoLk',
 				type: 'video',
 				maxResults: '50',
 				part: 'id,snippet',
