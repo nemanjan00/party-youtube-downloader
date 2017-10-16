@@ -2,7 +2,7 @@
   "name": "party-youtube-downloader",
   "version": "2.4.1",
   "description": "Music downloader for party",
-  "main": "./electron.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nemanjan00/party-youtube-downloader.git"
