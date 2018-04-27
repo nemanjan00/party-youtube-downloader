@@ -1,6 +1,6 @@
 {
   "name": "party-youtube-downloader",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "description": "Music downloader for party",
   "main": "./index.js",
   "repository": {
