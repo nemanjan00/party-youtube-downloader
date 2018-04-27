@@ -67,6 +67,10 @@ app.get('/download/:id', function(request, response) {
 			response.end();
 		});
 	});
+
+	downloader.on("error", function(data){
+		console.log(data);
+	});
 });
 
 app.get('/stream/:id', function(request, response) {
@@ -74,6 +78,8 @@ app.get('/stream/:id', function(request, response) {
 	response.setHeader("Content-Type", "audio/m4a");
 
 	var downloader = ytdl.getInfo('https://www.youtube.com/watch?v='+request.params.id, {filter: 'audioonly'}, function(err, info){
+		console.log(err);
+
 		for(i = 0; i < info.formats.length; i++){
 			if(info.formats[i].resolution === null){
 				response.redirect(info.formats[i].url);
