@@ -26,7 +26,7 @@
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "forever": "^0.15.1",
+    "forever": "^4.0.3",
     "ytdl-core": "^0.20.2"
   }
 }
