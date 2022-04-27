@@ -24,7 +24,7 @@
     "grunt-contrib-watch": "*"
   },
   "dependencies": {
-    "ejs": "^2.4.1",
+    "ejs": "^3.1.7",
     "express": "^4.13.4",
     "forever": "^0.15.1",
     "ytdl-core": "^0.20.2"
